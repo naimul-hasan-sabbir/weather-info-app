@@ -11,6 +11,10 @@ class WeatherScreen extends StatelessWidget {
           "Weather App",
           style: TextStyle(fontWeight: FontWeight.bold),
         ),
+        centerTitle: true,
+        actions: [
+          Icon(Icons.refresh),
+        ],
       ),
     );
   }

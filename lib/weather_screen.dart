@@ -18,6 +18,14 @@ class WeatherScreen extends StatelessWidget {
           }, icon: const Icon(Icons.refresh)),
         ],
       ),
+      body: Column(children: [
+        const Placeholder(
+          fallbackHeight: 250,
+        ),
+        const Placeholder(
+          fallbackHeight: 150,
+        )
+      ]),
     );
   }
 }

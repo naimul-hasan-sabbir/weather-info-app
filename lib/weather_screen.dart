@@ -19,12 +19,17 @@ class WeatherScreen extends StatelessWidget {
         ],
       ),
       body: Column(children: [
-        const Placeholder(
-          fallbackHeight: 250,
-        ),
+        Card(child: Column(
+          children: [
+            Text('300°F')
+          ],
+        ),),
+        const SizedBox(height: 20.0,),
         const Placeholder(
           fallbackHeight: 150,
-        )
+        ),
+        const SizedBox(height: 20.0,),
+        const Placeholder(fallbackHeight: 150,)
       ]),
     );
   }

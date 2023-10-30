@@ -13,27 +13,47 @@ class WeatherScreen extends StatelessWidget {
         ),
         centerTitle: true,
         actions: [
-          IconButton(onPressed: () {
-            print("refresh")
-          }, icon: const Icon(Icons.refresh)),
+          IconButton(onPressed: () {}, icon: const Icon(Icons.refresh)),
         ],
       ),
-      body: Column(children: [
-        SizedBox(
-          width: double.infinity,
-          child: Card(child: Column(
-            children: [
-              Text('300°F', style: TextStyle(fontSize: 32, fontWeight: FontWeight.bold),),
-            ],
-          ),),
-        ),
-        const SizedBox(height: 20.0,),
-        const Placeholder(
-          fallbackHeight: 150,
-        ),
-        const SizedBox(height: 20.0,),
-        const Placeholder(fallbackHeight: 150,)
-      ]),
+      body: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: Column(children: [
+          SizedBox(
+            width: double.infinity,
+            child: Card(
+              child: Column(
+                children: const [
+                  Text(
+                    '300°F',
+                    style: TextStyle(fontSize: 32, fontWeight: FontWeight.bold),
+                  ),
+                  Icon(
+                    Icons.cloud,
+                    size: 64,
+                  ),
+                  Text(
+                    'Rain',
+                    style: TextStyle(fontSize: 20),
+                  ),
+                ],
+              ),
+            ),
+          ),
+          const SizedBox(
+            height: 20.0,
+          ),
+          const Placeholder(
+            fallbackHeight: 150,
+          ),
+          const SizedBox(
+            height: 20.0,
+          ),
+          const Placeholder(
+            fallbackHeight: 150,
+          )
+        ]),
+      ),
     );
   }
 }

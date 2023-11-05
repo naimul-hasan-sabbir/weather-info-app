@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 
 class WeatherScreen extends StatelessWidget {
@@ -26,30 +28,36 @@ class WeatherScreen extends StatelessWidget {
               shape: RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(16),
               ),
-              child: Padding(
-                padding: const EdgeInsets.all(16.0),
-                child: Column(
-                  children: const [
-                    Text(
-                      '300°F',
-                      style:
-                          TextStyle(fontSize: 32, fontWeight: FontWeight.bold),
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(16),
+                child: BackdropFilter(
+                  filter: ImageFilter.blur(sigmaX: 10, sigmaY: 10),
+                  child: Padding(
+                    padding: const EdgeInsets.all(16.0),
+                    child: Column(
+                      children: const [
+                        Text(
+                          '300°F',
+                          style: TextStyle(
+                              fontSize: 32, fontWeight: FontWeight.bold),
+                        ),
+                        SizedBox(
+                          height: 16.0,
+                        ),
+                        Icon(
+                          Icons.cloud,
+                          size: 64,
+                        ),
+                        SizedBox(
+                          height: 16.0,
+                        ),
+                        Text(
+                          'Rain',
+                          style: TextStyle(fontSize: 20),
+                        ),
+                      ],
                     ),
-                    SizedBox(
-                      height: 16.0,
-                    ),
-                    Icon(
-                      Icons.cloud,
-                      size: 64,
-                    ),
-                    SizedBox(
-                      height: 16.0,
-                    ),
-                    Text(
-                      'Rain',
-                      style: TextStyle(fontSize: 20),
-                    ),
-                  ],
+                  ),
                 ),
               ),
             ),

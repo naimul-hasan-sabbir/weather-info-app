@@ -65,6 +65,13 @@ class WeatherScreen extends StatelessWidget {
           const SizedBox(
             height: 20.0,
           ),
+          const Text(
+            "Weather Forecast",
+            style: TextStyle(
+              fontSize: 24,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
           const Placeholder(
             fallbackHeight: 150,
           ),

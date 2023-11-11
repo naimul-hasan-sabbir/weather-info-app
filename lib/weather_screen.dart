@@ -80,7 +80,12 @@ class WeatherScreen extends StatelessWidget {
                 child: Card(
                   child: Column(
                     children: [
-                      Text("10:40")
+                      Text("10:40", style: TextStyle(
+                        fontSize: 16.0,
+                        fontWeight: FontWeight.bold,
+                      ),),
+                      const SizedBox(height: 8,),
+                      Icon(Icons.cloud, size: 32,),
                     ],
                   ),
                 ),

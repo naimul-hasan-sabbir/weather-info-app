@@ -78,8 +78,12 @@ class WeatherScreen extends StatelessWidget {
               SizedBox(
                 width: 100,
                 child: Card(
-                  child: Padding(
+                  elevation: 6,
+                  child: Container(
                     padding: const EdgeInsets.all(8.0),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(12)
+                    ),
                     child: Column(
                       children: [
                         Text("10:40", style: TextStyle(

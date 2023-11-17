@@ -232,37 +232,7 @@ class WeatherScreen extends StatelessWidget {
                     ),
                   ),
                 ),
-                Card(
-                  elevation: 6,
-                  child: Container(
-                    width: 100,
-                    padding: const EdgeInsets.all(8.0),
-                    decoration:
-                        BoxDecoration(borderRadius: BorderRadius.circular(12)),
-                    child: Column(
-                      children: [
-                        Text(
-                          "10:40",
-                          style: TextStyle(
-                            fontSize: 16.0,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                        const SizedBox(
-                          height: 8,
-                        ),
-                        Icon(
-                          Icons.cloud,
-                          size: 32,
-                        ),
-                        const SizedBox(
-                          height: 8,
-                        ),
-                        Text("320.12"),
-                      ],
-                    ),
-                  ),
-                ),
+                const HourlyForecastItem(),
               ],
             ),
           ),
@@ -281,41 +251,40 @@ class WeatherScreen extends StatelessWidget {
   }
 }
 
-class HourlyForecastWidge extends StatelessWidget {
-  const HourlyForecastWidget({super.key});
+class HourlyForecastItem extends StatelessWidget {
+  const HourlyForecastItem({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Card(
-                  elevation: 6,
-                  child: Container(
-                    width: 100,
-                    padding: const EdgeInsets.all(8.0),
-                    decoration:
-                        BoxDecoration(borderRadius: BorderRadius.circular(12)),
-                    child: const Column(
-                      children: [
-                        Text(
-                          "10:40",
-                          style: TextStyle(
-                            fontSize: 16.0,
-                            fontWeight: FontWeight.bold,
-                          ),
-                        ),
-                        SizedBox(
-                          height: 8,
-                        ),
-                        Icon(
-                          Icons.cloud,
-                          size: 32,
-                        ),
-                        SizedBox(
-                          height: 8,
-                        ),
-                        Text("320.12"),
-                      ],
-                    ),
-                  ),
+      elevation: 6,
+      child: Container(
+        width: 100,
+        padding: const EdgeInsets.all(8.0),
+        decoration: BoxDecoration(borderRadius: BorderRadius.circular(12)),
+        child: Column(
+          children: const [
+            Text(
+              "10:40",
+              style: TextStyle(
+                fontSize: 16.0,
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+            SizedBox(
+              height: 8,
+            ),
+            Icon(
+              Icons.cloud,
+              size: 32,
+            ),
+            SizedBox(
+              height: 8,
+            ),
+            Text("320.12"),
+          ],
+        ),
+      ),
     );
   }
 }

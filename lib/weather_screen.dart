@@ -97,6 +97,22 @@ class WeatherScreen extends StatelessWidget {
                 fontWeight: FontWeight.bold,
               ),
             ),
+            const SizedBox(height: 16.0),
+            Row(
+              children: [
+                Column(
+                  children: const [
+                    Icon(
+                      Icons.water_drop,
+                      size: 32,
+                    ),
+                    SizedBox(
+                      height: 8,
+                    )
+                  ],
+                )
+              ],
+            )
           ],
         ),
       ),

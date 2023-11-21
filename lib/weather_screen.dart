@@ -108,7 +108,12 @@ class WeatherScreen extends StatelessWidget {
                     ),
                     SizedBox(
                       height: 8,
-                    )
+                    ),
+                    Text("Humidity"),
+                    SizedBox(
+                      height: 8,
+                    ),
+                    Text("91")
                   ],
                 )
               ],

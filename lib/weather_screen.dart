@@ -113,7 +113,13 @@ class WeatherScreen extends StatelessWidget {
                     SizedBox(
                       height: 8,
                     ),
-                    Text("91")
+                    Text(
+                      "91",
+                      style: TextStyle(
+                        fontSize: 16,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
                   ],
                 )
               ],

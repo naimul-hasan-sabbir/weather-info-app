@@ -1,6 +1,7 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:weather_info_app/additional_info_item.dart';
 
 import 'hourly_forecast_item.dart';
 
@@ -101,29 +102,10 @@ class WeatherScreen extends StatelessWidget {
             ),
             const SizedBox(height: 16.0),
             Row(
-              children: [
-                Column(
-                  children: const [
-                    Icon(
-                      Icons.water_drop,
-                      size: 32,
-                    ),
-                    SizedBox(
-                      height: 8,
-                    ),
-                    Text("Humidity"),
-                    SizedBox(
-                      height: 8,
-                    ),
-                    Text(
-                      "91",
-                      style: TextStyle(
-                        fontSize: 16,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
-                  ],
-                )
+              children: const [
+                AdditionalInfoItem(),
+                AdditionalInfoItem(),
+                AdditionalInfoItem(),
               ],
             )
           ],

@@ -100,8 +100,9 @@ class WeatherScreen extends StatelessWidget {
                 fontWeight: FontWeight.bold,
               ),
             ),
-            const SizedBox(height: 16.0),
+            const SizedBox(height: 8.0),
             Row(
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: const [
                 AdditionalInfoItem(),
                 AdditionalInfoItem(),

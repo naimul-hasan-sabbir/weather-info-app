@@ -1,6 +1,7 @@
 import "package:flutter/material.dart";
 
 class AdditionalInfoItem extends StatelessWidget {
+  final IconData icon;
   const AdditionalInfoItem({
     super.key,
   });
@@ -10,7 +11,7 @@ class AdditionalInfoItem extends StatelessWidget {
     return Column(
       children: const [
         Icon(
-          Icons.water_drop,
+          icon,
           size: 32,
         ),
         SizedBox(

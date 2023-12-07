@@ -20,22 +20,22 @@ class HourlyForecastItem extends StatelessWidget {
         padding: const EdgeInsets.all(8.0),
         decoration: BoxDecoration(borderRadius: BorderRadius.circular(12)),
         child: Column(
-          children: const [
+          children: [
             Text(
               time,
-              style: TextStyle(
+              style: const TextStyle(
                 fontSize: 16.0,
                 fontWeight: FontWeight.bold,
               ),
             ),
-            SizedBox(
+            const SizedBox(
               height: 8,
             ),
             Icon(
               icon,
               size: 32,
             ),
-            SizedBox(
+            const SizedBox(
               height: 8,
             ),
             Text(temperature),

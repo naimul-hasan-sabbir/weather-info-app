@@ -10,7 +10,10 @@ class WeatherScreen extends StatelessWidget {
   const WeatherScreen({super.key});
 
   Future getCurrentWeather() async {
-    http.get(Uri.parse(uri))
+    http.get(
+      Uri.parse(
+          "https://api.openweathermap.org/data/2.5/weather?q=London,uk&APPID=72697bf4fcb7d4d98def70718d11c62f"),
+    );
   }
 
   @override

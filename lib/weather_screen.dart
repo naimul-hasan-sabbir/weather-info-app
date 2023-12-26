@@ -1,3 +1,4 @@
+import 'dart:convert';
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
@@ -29,6 +30,12 @@ class _WeatherScreenState extends State<WeatherScreen> {
           "https://api.openweathermap.org/data/2.5/forecast?q=$cityName,uk&APPID=$openWeatherApiKey",
         ),
       );
+      final data = jsonDecode(res.body);
+
+      if (data['cod'] != '200') {
+        throw 'An expected error occured';
+      }
+      print(data['list'][0]['main']['temps']);
     } catch (e) {
       throw e.toString();
     }

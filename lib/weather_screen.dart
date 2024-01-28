@@ -61,7 +61,9 @@ class _WeatherScreenState extends State<WeatherScreen> {
             return Center(child: Text(snapshot.error.toString()));
           }
 
-          final data = snapshot.data;
+          final data = snapshot.data!;
+
+          final currentTemp = data['list'][0]['main']['temp'];
 
           return Padding(
             padding: const EdgeInsets.all(16.0),
@@ -84,7 +86,7 @@ class _WeatherScreenState extends State<WeatherScreen> {
                           child: Column(
                             children: [
                               Text(
-                                '200 k',
+                                '$currentTemp k',
                                 style: const TextStyle(
                                     fontSize: 32, fontWeight: FontWeight.bold),
                               ),

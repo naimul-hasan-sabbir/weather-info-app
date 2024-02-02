@@ -64,6 +64,7 @@ class _WeatherScreenState extends State<WeatherScreen> {
           final data = snapshot.data!;
 
           final currentTemp = data['list'][0]['main']['temp'];
+          final currentSky = data['list'][0]['weather']['main'];
 
           return Padding(
             padding: const EdgeInsets.all(16.0),
